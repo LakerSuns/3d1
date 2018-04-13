@@ -1,0 +1,70 @@
+/*
+* @Author: Administrator
+* @Date:   2018-03-15 19:55:38
+* @Last Modified by:   Administrator
+* @Last Modified time: 2018-03-15 21:27:07
+*/
+*{
+    margin: 0;
+	padding: 0; 
+	list-style: none;
+}
+body{
+	background: pink;
+}
+.box{
+	width: 500px;
+	height: 500px;
+	background: blue;
+	margin: 100px auto;
+	border:2px solid red; 
+	perspective: 100px;
+}
+.box ul{
+	width: 200px;
+	height: 200px;
+	margin: 150px auto;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: 2s;
+	transform: rotate3d(0, 1, 1, 180deg);
+}
+.box ul li{
+	width: 200px;
+	height: 200px;
+	/* background: yellow; */
+	position: absolute;
+	top: 0;
+    left: 0;
+    transition: 3s;
+}
+.box:hover .left{
+	background: gray;
+	transform: translateX(-100px) rotateY(90deg);
+    box-shadow: 0 0 15px 5px white;
+}
+.box:hover .right{
+	background: pink;
+	transform: translateX(100px) rotateY(90deg);
+    box-shadow: 0 0 15px 5px white;
+}
+.box:hover .top{
+	background: deeppink;
+	transform: translateY(-100px) rotateX(90deg);
+    box-shadow: 0 0 15px 5px white;
+}
+.box:hover .bottom{
+	background: rgba(255, 255, 255, 0.2);
+	transform: translateY(100px) rotateX(90deg);
+    box-shadow: 0 0 15px 5px white;
+}
+.box:hover .forward{
+	background: #58a;
+	transform: translateZ(100px);
+    box-shadow: 0 0 15px 5px white;
+}
+.box:hover .backside{
+	background: red;
+	transform: translateZ(-100px);
+    box-shadow: 0 0 15px 5px white;
+}
